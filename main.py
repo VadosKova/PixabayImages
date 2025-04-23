@@ -8,7 +8,7 @@ API_KEY = "49887797-4504305467ee5706dfdb7b3be"
 categories = ["All", "Nature", "Car", "Business", "Forest", "Wolf"]
 
 def update_image(category):
-    query = category if category != "Все" else ""
+    query = category if category != "All" else ""
 
     url = f"https://pixabay.com/api/?key={API_KEY}&q={query}&image_type=photo"
     response = requests.get(url)
