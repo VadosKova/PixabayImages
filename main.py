@@ -15,6 +15,14 @@ def update_image():
             img_data = requests.get(img_url).content
             ext = img_url.split('.')[-1]
 
+            with open(f"img.{ext}", "wb") as f:
+                f.write(img_data)
+
+            img = Image.open(f"img.{ext}").resize((400, 400))
+            tk_img = ImageTk.PhotoImage(img)
+            label.config(image=tk_img)
+            label.image = tk_img
+
 
 root = Tk()
 root.title("Pixabay Images")
