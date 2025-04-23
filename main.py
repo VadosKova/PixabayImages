@@ -31,7 +31,7 @@ root.geometry("500x500")
 label = Label(root)
 label.pack(padx=20, pady=20)
 
-Button(root, text="Next").pack(pady=10)
-
+Button(root, text="Next", command=update_image).pack(pady=10)
+update_image()
 
 root.mainloop()
